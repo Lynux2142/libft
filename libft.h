@@ -6,7 +6,7 @@
 /*   By: lguiller <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 17:16:27 by lguiller          #+#    #+#             */
-/*   Updated: 2018/06/05 11:55:08 by bede-fre         ###   ########.fr       */
+/*   Updated: 2018/06/20 17:46:09 by bede-fre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,5 +136,7 @@ double				ft_rad(double x);
 
 int					ft_rgba(unsigned char r, unsigned char g,
 					unsigned char b, unsigned char a);
+
+void				ft_remove_whitespaces(char *str);
 
 #endif

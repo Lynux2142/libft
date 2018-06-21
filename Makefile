@@ -6,7 +6,7 @@
 #    By: lguiller <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 11:15:29 by lguiller          #+#    #+#              #
-#    Updated: 2018/06/13 11:48:28 by lguiller         ###   ########.fr        #
+#    Updated: 2018/06/20 17:46:34 by bede-fre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,9 +30,10 @@ SRC		= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c 
 		  ft_isprime.c ft_abs.c ft_strcspn.c ft_pgcd.c ft_ppcm.c ft_putnbr_fd.c \
 		  ft_realloc.c ft_sqrt.c get_next_line.c ft_isspace.c print_memory.c \
 		  ft_atoi_base.c power.c ft_split_whitespaces.c ft_error.c \
-		  ft_puterror.c ft_fabs.c ft_rounded_to_mult.c ft_rgba.c ft_rad.c
+		  ft_puterror.c ft_fabs.c ft_rounded_to_mult.c ft_rgba.c ft_rad.c \
+		  ft_remove_whitespaces.c
 OBJ		= $(SRC:.c=.o)
-FLAGS	= -Wall -Wextra -Werror
+FLAGS	= -Wall -Wextra -Werror -g
 
 ##################
 ##    COLORS    ##
