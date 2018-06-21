@@ -6,7 +6,7 @@
 #    By: lguiller <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 11:15:29 by lguiller          #+#    #+#              #
-#    Updated: 2018/06/20 17:46:34 by bede-fre         ###   ########.fr        #
+#    Updated: 2018/06/21 13:11:23 by lguiller         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,15 +68,11 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	@echo $(_CLEAR)$(_YELLOW)"building - "$(_GREEN)"libft"$(_END)
+	@echo $(_YELLOW)"building - "$(_GREEN)"libft"$(_END)
 	@echo $(_GREEN)"Done."$(_END)$(_SHOW_CURS)
 
 %.o: %.c
 	@gcc $(FLAGS) -c $^ -o $@
-	@printf $(_HIDE_CURS)$(_CLEAR)$(_YELLOW)"building - "$(_GREEN)
-	@printf $@ | cut -d'.' -f1
-	@printf $(_END)
-	@printf $(_UP)$(_CUT)
 
 clean:
 	@/bin/rm -f $(OBJ)
@@ -84,7 +80,9 @@ clean:
 fclean: clean
 	@/bin/rm -f $(NAME)
 
-re: fclean all
+re:
+	@$(MAKE) fclean
+	@$(MAKE)
 
 lynux:
 	@echo "   /&& /&&   /&&                                              "
