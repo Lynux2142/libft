@@ -6,7 +6,7 @@
 #    By: lguiller <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 11:15:29 by lguiller          #+#    #+#              #
-#    Updated: 2018/06/21 13:11:23 by lguiller         ###   ########.fr        #
+#    Updated: 2018/07/26 17:50:49 by lguiller         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,7 +68,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	@echo $(_YELLOW)"building - "$(_GREEN)"libft"$(_END)
+	@echo $(_YELLOW)"building - "$(_GREEN)$(NAME)$(_END)
 	@echo $(_GREEN)"Done."$(_END)$(_SHOW_CURS)
 
 %.o: %.c
