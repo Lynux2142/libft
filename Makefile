@@ -6,7 +6,7 @@
 #    By: lguiller <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 11:15:29 by lguiller          #+#    #+#              #
-#    Updated: 2018/09/12 13:03:48 by lguiller         ###   ########.fr        #
+#    Updated: 2018/09/12 17:30:44 by lguiller         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,7 @@ _CUT		= "\033[k"
 ##   TARGETS    ##
 ##################
 
-.PHONY: all clean fclean re lynux booh
+.PHONY: all clean fclean re norme lynux booh
 
 all: $(NAME)
 
@@ -83,6 +83,9 @@ fclean: clean
 re:
 	@$(MAKE) fclean
 	@$(MAKE)
+
+norme:
+	@norminette *.[c,h]
 
 lynux:
 	@echo "   /&& /&&   /&&                                              "
