@@ -6,7 +6,7 @@
 /*   By: lguiller <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/22 15:24:31 by lguiller          #+#    #+#             */
-/*   Updated: 2018/05/31 13:39:07 by bede-fre         ###   ########.fr       */
+/*   Updated: 2018/09/12 14:01:32 by lguiller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,8 @@ int				get_next_line(const int fd, char **line)
 		c = ft_getchar(link, &(((t_struct *)link->content)->rd_len));
 		++len;
 		if ((len % BUFF_SIZE) == 0)
-			*line = ft_realloc(*line, len + BUFF_SIZE + 1);
+			if (!(*line = ft_realloc(*line, len + BUFF_SIZE + 1)))
+				return (-1);
 	}
 	line[0][len] = '\0';
 	return ((**line == '\0' && c != GNL_CAR) ? 0 : 1);
