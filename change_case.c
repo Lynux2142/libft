@@ -6,7 +6,7 @@
 /*   By: lguiller <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 13:00:16 by lguiller          #+#    #+#             */
-/*   Updated: 2018/09/12 13:26:41 by lguiller         ###   ########.fr       */
+/*   Updated: 2018/09/12 14:09:38 by lguiller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,7 @@ char	*ft_lowercase(const char *str)
 		return (NULL);
 	i = -1;
 	while (str[++i])
-	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-			tmp[i] = ft_tolower(str[i]);
-		else
-			tmp[i] = str[i];
-	}
+		tmp[i] = ft_tolower(str[i]);
 	return (tmp);
 }
 
@@ -39,11 +34,6 @@ char	*ft_uppercase(const char *str)
 		return (NULL);
 	i = -1;
 	while (str[++i])
-	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-			tmp[i] = ft_toupper(str[i]);
-		else
-			tmp[i] = str[i];
-	}
+		tmp[i] = ft_toupper(str[i]);
 	return (tmp);
 }
