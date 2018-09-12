@@ -6,7 +6,7 @@
 /*   By: lguiller <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 17:16:27 by lguiller          #+#    #+#             */
-/*   Updated: 2018/09/10 09:15:50 by lguiller         ###   ########.fr       */
+/*   Updated: 2018/09/12 13:26:40 by lguiller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,5 +139,8 @@ int					ft_rgba(unsigned char r, unsigned char g,
 					unsigned char b, unsigned char a);
 
 void				ft_remove_whitespaces(char *str);
+
+char				*ft_lowercase(const char *str);
+char				*ft_uppercase(const char *str);
 
 #endif
