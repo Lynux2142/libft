@@ -6,7 +6,7 @@
 /*   By: lguiller <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/22 15:24:31 by lguiller          #+#    #+#             */
-/*   Updated: 2018/09/12 14:01:32 by lguiller         ###   ########.fr       */
+/*   Updated: 2018/10/05 17:50:58 by lguiller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,8 @@ static t_list	*ft_check(t_list **list, size_t fd)
 			return (current);
 		current = current->next;
 	}
-	if (!(elem = (t_list *)ft_memalloc(sizeof(t_list))))
-		return (NULL);
-	if (!(elem->content = ft_memalloc(sizeof(t_struct))))
-		return (NULL);
+	elem = (t_list *)ft_memalloc(sizeof(t_list));
+	elem->content = ft_memalloc(sizeof(t_struct));
 	elem->content_size = fd;
 	ft_lstadd(list, elem);
 	return (elem);
@@ -74,8 +72,7 @@ int				get_next_line(const int fd, char **line)
 		c = ft_getchar(link, &(((t_struct *)link->content)->rd_len));
 		++len;
 		if ((len % BUFF_SIZE) == 0)
-			if (!(*line = ft_realloc(*line, len + BUFF_SIZE + 1)))
-				return (-1);
+			*line = ft_realloc(*line, len + BUFF_SIZE + 1);
 	}
 	line[0][len] = '\0';
 	return ((**line == '\0' && c != GNL_CAR) ? 0 : 1);

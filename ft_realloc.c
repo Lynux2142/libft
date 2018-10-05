@@ -6,7 +6,7 @@
 /*   By: lguiller <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/10 15:04:12 by lguiller          #+#    #+#             */
-/*   Updated: 2018/06/20 11:56:51 by bede-fre         ###   ########.fr       */
+/*   Updated: 2018/10/05 17:49:29 by lguiller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,12 @@ void		*ft_realloc(void *str, size_t size)
 	if (size == 0 && str)
 	{
 		ft_memdel(&str);
-		if (!(str = ft_memalloc(1)))
-			return (NULL);
+		str = ft_memalloc(1);
 	}
 	else if (size > 0)
 	{
 		tmp = str;
-		if (!(str = ft_memalloc(size)))
-			return (NULL);
+		str = ft_memalloc(size);
 		if (tmp)
 		{
 			ft_strncpy(str, tmp, size);
