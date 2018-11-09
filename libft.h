@@ -6,7 +6,7 @@
 /*   By: lguiller <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 17:16:27 by lguiller          #+#    #+#             */
-/*   Updated: 2018/09/12 13:26:40 by lguiller         ###   ########.fr       */
+/*   Updated: 2018/11/10 00:54:47 by lguiller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,12 @@ typedef struct		s_struct
 	int				len;
 	int				rd_len;
 }					t_struct;
+
+typedef struct		s_point
+{
+	int				x;
+	int				y;
+}					t_point;
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
