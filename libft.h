@@ -6,7 +6,7 @@
 /*   By: lguiller <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 17:16:27 by lguiller          #+#    #+#             */
-/*   Updated: 2018/11/10 00:54:47 by lguiller         ###   ########.fr       */
+/*   Updated: 2018/11/15 09:53:11 by lguiller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,5 +148,7 @@ void				ft_remove_whitespaces(char *str);
 
 char				*ft_lowercase(const char *str);
 char				*ft_uppercase(const char *str);
+
+t_point				ft_pointdef(int x, int y);
 
 #endif
