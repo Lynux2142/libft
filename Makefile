@@ -6,7 +6,7 @@
 #    By: lguiller <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 11:15:29 by lguiller          #+#    #+#              #
-#    Updated: 2018/11/10 00:56:17 by lguiller         ###   ########.fr        #
+#    Updated: 2018/11/23 19:02:14 by lguiller         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,23 +15,23 @@
 ##################
 
 NAME	= libft.a
-SRC		= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c \
-		  ft_memcmp.c ft_strlen.c ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strcat.c \
-		  ft_strncat.c ft_strlcat.c ft_strchr.c ft_strrchr.c ft_strstr.c \
-		  ft_strnstr.c ft_strcmp.c ft_strncmp.c ft_atoi.c ft_isalpha.c \
-		  ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_toupper.c \
-		  ft_tolower.c ft_memalloc.c ft_memdel.c ft_strnew.c ft_strdel.c \
-		  ft_putchar.c ft_putstr.c ft_putendl.c ft_putchar_fd.c ft_putnbr.c \
-		  ft_strclr.c ft_striter.c ft_striteri.c ft_strmap.c ft_strmapi.c \
-		  ft_strequ.c ft_strnequ.c ft_strsub.c ft_strjoin.c ft_strtrim.c \
-		  ft_strsplit.c ft_itoa.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_base.c \
-		  ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c \
-		  ft_lstmap.c ft_putaddr.c ft_putaddr_fd.c ft_itoa_base.c ft_brackets.c \
-		  ft_isprime.c ft_abs.c ft_strcspn.c ft_pgcd.c ft_ppcm.c ft_putnbr_fd.c \
-		  ft_realloc.c ft_sqrt.c get_next_line.c ft_isspace.c print_memory.c \
-		  ft_atoi_base.c power.c ft_split_whitespaces.c ft_error.c \
-		  ft_puterror.c ft_fabs.c ft_rounded_to_mult.c ft_rgba.c ft_rad.c \
-		  ft_remove_whitespaces.c ft_deg.c change_case.c ft_pointdef.c
+SRC		= $(addsuffix .c, ft_memset ft_bzero ft_memcpy ft_memccpy ft_memmove ft_memchr \
+		  ft_memcmp ft_strlen ft_strdup ft_strcpy ft_strncpy ft_strcat \
+		  ft_strncat ft_strlcat ft_strchr ft_strrchr ft_strstr \
+		  ft_strnstr ft_strcmp ft_strncmp ft_atoi ft_isalpha \
+		  ft_isdigit ft_isalnum ft_isascii ft_isprint ft_toupper \
+		  ft_tolower ft_memalloc ft_memdel ft_strnew ft_strdel \
+		  ft_putchar ft_putstr ft_putendl ft_putchar_fd ft_putnbr \
+		  ft_strclr ft_striter ft_striteri ft_strmap ft_strmapi \
+		  ft_strequ ft_strnequ ft_strsub ft_strjoin ft_strtrim \
+		  ft_strsplit ft_itoa ft_putstr_fd ft_putendl_fd ft_putnbr_base \
+		  ft_lstnew ft_lstdelone ft_lstdel ft_lstadd ft_lstiter \
+		  ft_lstmap ft_putaddr ft_putaddr_fd ft_itoa_base ft_brackets \
+		  ft_isprime ft_abs ft_strcspn ft_pgcd ft_ppcm ft_putnbr_fd \
+		  ft_realloc ft_sqrt get_next_line ft_isspace print_memory \
+		  ft_atoi_base power ft_split_whitespaces ft_error \
+		  ft_puterror ft_fabs ft_rounded_to_mult ft_rgba ft_rad \
+		  ft_remove_whitespaces ft_deg change_case ft_pointdef)
 OBJ		= $(SRC:.c=.o)
 FLAGS	= -Wall -Wextra -Werror -g
 
@@ -61,18 +61,21 @@ _CUT		= "\033[k"
 ##   TARGETS    ##
 ##################
 
-.PHONY: all clean fclean re norme
+.PHONY: all clean fclean re norme print
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+print:
+	@echo $(_CLEAR)$(_YELLOW)"Building - "$(_GREEN)$(NAME)$(_END)
+
+$(NAME): print $(OBJ)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	@echo $(_YELLOW)"building - "$(_GREEN)$(NAME)$(_END)
-	@echo $(_GREEN)"Done."$(_END)$(_SHOW_CURS)
+	@echo $(_GREEN)"\nDone.\n"$(_END)$(_SHOW_CURS)
 
 %.o: %.c
 	@gcc $(FLAGS) -c $^ -o $@
+	@printf $^
 
 clean:
 	@/bin/rm -f $(OBJ)
