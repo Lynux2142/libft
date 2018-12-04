@@ -6,7 +6,7 @@
 #    By: lguiller <lguiller@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 11:15:29 by lguiller          #+#    #+#              #
-#    Updated: 2018/11/28 09:58:17 by lguiller         ###   ########.fr        #
+#    Updated: 2018/12/04 15:34:05 by lguiller         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ SRC		= $(addsuffix .c, ft_memset ft_bzero ft_memcpy ft_memccpy ft_memmove ft_mem
 		  ft_realloc ft_sqrt get_next_line ft_isspace print_memory \
 		  ft_atoi_base power ft_split_whitespaces ft_error \
 		  ft_puterror ft_fabs ft_rounded_to_mult ft_rgba ft_rad \
-		  ft_remove_whitespaces ft_deg change_case ft_pointdef)
+		  ft_remove_whitespaces ft_deg change_case ft_pointdef ft_signe)
 OBJ		= $(SRC:.c=.o)
 FLAGS	= -Wall -Wextra -Werror -g
 

@@ -6,7 +6,7 @@
 /*   By: lguiller <lguiller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 17:16:27 by lguiller          #+#    #+#             */
-/*   Updated: 2018/11/28 09:58:14 by lguiller         ###   ########.fr       */
+/*   Updated: 2018/12/04 15:33:58 by lguiller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,5 +150,7 @@ char				*ft_lowercase(const char *str);
 char				*ft_uppercase(const char *str);
 
 t_point				ft_pointdef(int x, int y);
+
+int					ft_signe(int nb);
 
 #endif
