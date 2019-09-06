@@ -6,7 +6,7 @@
 #    By: lguiller <lguiller@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 11:15:29 by lguiller          #+#    #+#              #
-#    Updated: 2019/09/06 15:07:24 by lguiller         ###   ########.fr        #
+#    Updated: 2019/09/06 17:57:03 by lguiller         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,24 +15,98 @@
 ##################
 
 NAME		= libft.a
-SRCS		= $(addsuffix .c, ft_memset ft_bzero ft_memcpy ft_memccpy ft_memmove ft_memchr \
-			  ft_memcmp ft_strlen ft_strdup ft_strcpy ft_strncpy ft_strcat \
-			  ft_strncat ft_strlcat ft_strchr ft_strrchr ft_strstr \
-			  ft_strnstr ft_strcmp ft_strncmp ft_atoi ft_isalpha \
-			  ft_isdigit ft_isalnum ft_isascii ft_isprint ft_toupper \
-			  ft_tolower ft_memalloc ft_memdel ft_strnew ft_strdel \
-			  ft_putchar ft_putstr ft_putendl ft_putchar_fd ft_putnbr \
-			  ft_strclr ft_striter ft_striteri ft_strmap ft_strmapi \
-			  ft_strequ ft_strnequ ft_strsub ft_strjoin ft_strtrim \
-			  ft_strsplit ft_itoa ft_putstr_fd ft_putendl_fd ft_putnbr_base \
-			  ft_lstnew ft_lstdelone ft_lstdel ft_lstadd ft_lstiter \
-			  ft_lstmap ft_putaddr ft_putaddr_fd ft_itoa_base ft_brackets \
-			  ft_isprime ft_abs ft_strcspn ft_pgcd ft_ppcm ft_putnbr_fd \
-			  ft_realloc ft_sqrt get_next_line ft_isspace print_memory \
-			  ft_atoi_base power ft_split_whitespaces ft_error \
-			  ft_puterror ft_fabs ft_rounded_to_mult ft_rgba ft_rad \
-			  ft_remove_whitespaces ft_deg change_case ft_pointdef ft_signe)
+
+SRCS1		= ft_memset 
+SRCS1		+= ft_bzero 
+SRCS1		+= ft_memcpy 
+SRCS1		+= ft_memccpy 
+SRCS1		+= ft_memmove 
+SRCS1		+= ft_memchr
+SRCS1		+= ft_memcmp
+SRCS1		+= ft_strlen
+SRCS1		+= ft_strdup
+SRCS1		+= ft_strcpy
+SRCS1		+= ft_strncpy 
+SRCS1		+= ft_strcat
+SRCS1		+= ft_strncat
+SRCS1		+= ft_strlcat
+SRCS1		+= ft_strchr
+SRCS1		+= ft_strrchr
+SRCS1		+= ft_strstr
+SRCS1		+= ft_strnstr
+SRCS1		+= ft_strcmp
+SRCS1		+= ft_strncmp
+SRCS1		+= ft_atoi
+SRCS1		+= ft_isalpha
+SRCS1		+= ft_isdigit
+SRCS1		+= ft_isalnum
+SRCS1		+= ft_isascii
+SRCS1		+= ft_isprint
+SRCS1		+= ft_toupper
+SRCS1		+= ft_tolower
+SRCS1		+= ft_memalloc
+SRCS1		+= ft_memdel
+SRCS1		+= ft_strnew
+SRCS1		+= ft_strdel
+SRCS1		+= ft_putchar
+SRCS1		+= ft_putstr
+SRCS1		+= ft_putendl
+SRCS1		+= ft_putchar_fd
+SRCS1		+= ft_putnbr
+SRCS1		+= ft_strclr
+SRCS1		+= ft_striter
+SRCS1		+= ft_striteri
+SRCS1		+= ft_strmap
+SRCS1		+= ft_strmapi
+SRCS1		+= ft_strequ
+SRCS1		+= ft_strnequ
+SRCS1		+= ft_strsub
+SRCS1		+= ft_strjoin
+SRCS1		+= ft_strtrim
+SRCS1		+= ft_strsplit
+SRCS1		+= ft_itoa
+SRCS1		+= ft_putstr_fd
+SRCS1		+= ft_putendl_fd
+SRCS1		+= ft_putnbr_base
+SRCS1		+= ft_lstnew
+SRCS1		+= ft_lstdelone
+SRCS1		+= ft_lstdel
+SRCS1		+= ft_lstadd
+SRCS1		+= ft_lstiter
+SRCS1		+= ft_lstmap
+SRCS1		+= ft_putaddr
+SRCS1		+= ft_putaddr_fd
+SRCS1		+= ft_itoa_base
+SRCS1		+= ft_brackets
+SRCS1		+= ft_isprime
+SRCS1		+= ft_abs
+SRCS1		+= ft_strcspn
+SRCS1		+= ft_pgcd
+SRCS1		+= ft_ppcm
+SRCS1		+= ft_putnbr_fd
+SRCS1		+= ft_realloc
+SRCS1		+= ft_sqrt
+SRCS1		+= get_next_line
+SRCS1		+= ft_isspace
+SRCS1		+= print_memory
+SRCS1		+= ft_atoi_base
+SRCS1		+= power
+SRCS1		+= ft_split_whitespaces
+SRCS1		+= ft_error
+SRCS1		+= ft_puterror
+SRCS1		+= ft_fabs
+SRCS1		+= ft_rounded_to_mult
+SRCS1		+= ft_rgba
+SRCS1		+= ft_rad
+SRCS1		+= ft_remove_whitespaces
+SRCS1		+= ft_deg
+SRCS1		+= change_case
+SRCS1		+= ft_pointdef
+SRCS1		+= ft_signe
+
+SRCS		= $(addsuffix .c, $(SRCS1))
 OBJS		= $(SRCS:.c=.o)
+
 CFLAGS		= -Wall -Wextra -Werror -g
 CC			= clang
 
@@ -62,18 +136,19 @@ _CUT		= "\033[k"
 ##   TARGETS    ##
 ##################
 
-.PHONY: all clean fclean re norme print
+.PHONY: all clean fclean re norme
 .SILENT:
 
-all: $(NAME)
+all: launch
 
-print:
+launch:
 	echo $(_CLEAR)$(_YELLOW)"Building - "$(_GREEN)$(NAME)$(_END)
+	$(MAKE) $(NAME)
+	echo $(_GREEN)"\nDone."$(_END)$(_SHOW_CURS)
 
-$(NAME): print $(OBJS)
+$(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
 	ranlib $(NAME)
-	echo $(_GREEN)"\nDone."$(_END)$(_SHOW_CURS)
 
 $(OBJS): %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
