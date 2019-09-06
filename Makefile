@@ -6,7 +6,7 @@
 #    By: lguiller <lguiller@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 11:15:29 by lguiller          #+#    #+#              #
-#    Updated: 2019/09/06 14:49:51 by lguiller         ###   ########.fr        #
+#    Updated: 2019/09/06 15:07:24 by lguiller         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,7 +73,7 @@ print:
 $(NAME): print $(OBJS)
 	ar rc $(NAME) $(OBJS)
 	ranlib $(NAME)
-	echo $(_GREEN)"\nDone.\n"$(_END)$(_SHOW_CURS)
+	echo $(_GREEN)"\nDone."$(_END)$(_SHOW_CURS)
 
 $(OBJS): %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
