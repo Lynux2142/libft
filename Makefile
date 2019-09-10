@@ -6,7 +6,7 @@
 #    By: lguiller <lguiller@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 11:15:29 by lguiller          #+#    #+#              #
-#    Updated: 2019/09/06 17:57:03 by lguiller         ###   ########.fr        #
+#    Updated: 2019/09/10 12:18:12 by lguiller         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,17 +16,17 @@
 
 NAME		= libft.a
 
-SRCS1		= ft_memset 
-SRCS1		+= ft_bzero 
-SRCS1		+= ft_memcpy 
-SRCS1		+= ft_memccpy 
-SRCS1		+= ft_memmove 
+SRCS1		= ft_memset
+SRCS1		+= ft_bzero
+SRCS1		+= ft_memcpy
+SRCS1		+= ft_memccpy
+SRCS1		+= ft_memmove
 SRCS1		+= ft_memchr
 SRCS1		+= ft_memcmp
 SRCS1		+= ft_strlen
 SRCS1		+= ft_strdup
 SRCS1		+= ft_strcpy
-SRCS1		+= ft_strncpy 
+SRCS1		+= ft_strncpy
 SRCS1		+= ft_strcat
 SRCS1		+= ft_strncat
 SRCS1		+= ft_strlcat
