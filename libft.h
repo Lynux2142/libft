@@ -6,7 +6,7 @@
 /*   By: lguiller <lguiller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 17:16:27 by lguiller          #+#    #+#             */
-/*   Updated: 2018/12/04 15:33:58 by lguiller         ###   ########.fr       */
+/*   Updated: 2020/07/20 14:55:27 by lguiller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,10 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
-# include <stdio.h>
 # include <errno.h>
 # include <math.h>
 
-# define BUFF_SIZE 32
+# define BUFF_SIZE 4096
 # define GNL_CAR '\n'
 
 typedef struct		s_list

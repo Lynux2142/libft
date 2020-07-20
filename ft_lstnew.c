@@ -6,7 +6,7 @@
 /*   By: lguiller <lguiller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 12:04:21 by lguiller          #+#    #+#             */
-/*   Updated: 2018/11/28 09:57:28 by lguiller         ###   ########.fr       */
+/*   Updated: 2020/07/09 14:55:53 by lguiller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list		*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list *elem;
 
-	if (!(elem = malloc(sizeof(t_list))))
+	if (!(elem = (t_list*)malloc(sizeof(t_list))))
 		return (NULL);
 	if (content == NULL)
 	{
