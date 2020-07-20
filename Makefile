@@ -6,7 +6,7 @@
 #    By: lguiller <lguiller@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 11:15:29 by lguiller          #+#    #+#              #
-#    Updated: 2019/10/01 10:15:48 by lguiller         ###   ########.fr        #
+#    Updated: 2020/07/20 16:39:29 by lguiller         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -107,6 +107,8 @@ SRCS1		+= ft_signe
 SRCS		= $(addsuffix .c, $(SRCS1))
 OBJS		= $(SRCS:.c=.o)
 
+HEADER		= libft.h
+
 CFLAGS		= -Wall -Wextra -Werror -g
 CC			= clang
 
@@ -146,11 +148,12 @@ launch:
 	$(MAKE) $(NAME)
 	echo $(_GREEN)"\nDone."$(_END)$(_SHOW_CURS)
 
+
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
 	ranlib $(NAME)
 
-$(OBJS): %.o: %.c
+$(OBJS): %.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
 	printf $<
 
